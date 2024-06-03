@@ -12,19 +12,10 @@
 		A73471012C0D62EE002B3CB6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A73471002C0D62EE002B3CB6 /* Assets.xcassets */; };
 		A73471042C0D62EE002B3CB6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A73471032C0D62EE002B3CB6 /* Preview Assets.xcassets */; };
 		A734710E2C0D62EF002B3CB6 /* PureTimeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A734710D2C0D62EF002B3CB6 /* PureTimeTests.swift */; };
-		A73471182C0D62EF002B3CB6 /* PureTimeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A73471172C0D62EF002B3CB6 /* PureTimeUITests.swift */; };
-		A734711A2C0D62EF002B3CB6 /* PureTimeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A73471192C0D62EF002B3CB6 /* PureTimeUITestsLaunchTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		A734710A2C0D62EF002B3CB6 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = A73470F12C0D62ED002B3CB6 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = A73470F82C0D62ED002B3CB6;
-			remoteInfo = PureTime;
-		};
-		A73471142C0D62EF002B3CB6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = A73470F12C0D62ED002B3CB6 /* Project object */;
 			proxyType = 1;
@@ -38,12 +29,9 @@
 		A73470FC2C0D62ED002B3CB6 /* PureTimeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PureTimeApp.swift; sourceTree = "<group>"; };
 		A73470FE2C0D62ED002B3CB6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		A73471002C0D62EE002B3CB6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		A73471032C0D62EE002B3CB6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = "Preview Assets.xcassets"; path = "../PureTime/Preview Content/Preview Assets.xcassets"; sourceTree = "<group>"; };
+		A73471032C0D62EE002B3CB6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A73471092C0D62EF002B3CB6 /* PureTimeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PureTimeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A734710D2C0D62EF002B3CB6 /* PureTimeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PureTimeTests.swift; sourceTree = "<group>"; };
-		A73471132C0D62EF002B3CB6 /* PureTimeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PureTimeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A73471172C0D62EF002B3CB6 /* PureTimeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PureTimeUITests.swift; sourceTree = "<group>"; };
-		A73471192C0D62EF002B3CB6 /* PureTimeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PureTimeUITestsLaunchTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,13 +49,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A73471102C0D62EF002B3CB6 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -76,7 +57,6 @@
 			children = (
 				A73470FB2C0D62ED002B3CB6 /* PureTime */,
 				A734710C2C0D62EF002B3CB6 /* PureTimeTests */,
-				A73471162C0D62EF002B3CB6 /* PureTimeUITests */,
 				A73470FA2C0D62ED002B3CB6 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -86,7 +66,6 @@
 			children = (
 				A73470F92C0D62ED002B3CB6 /* PureTime.app */,
 				A73471092C0D62EF002B3CB6 /* PureTimeTests.xctest */,
-				A73471132C0D62EF002B3CB6 /* PureTimeUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -116,15 +95,6 @@
 				A734710D2C0D62EF002B3CB6 /* PureTimeTests.swift */,
 			);
 			path = PureTimeTests;
-			sourceTree = "<group>";
-		};
-		A73471162C0D62EF002B3CB6 /* PureTimeUITests */ = {
-			isa = PBXGroup;
-			children = (
-				A73471172C0D62EF002B3CB6 /* PureTimeUITests.swift */,
-				A73471192C0D62EF002B3CB6 /* PureTimeUITestsLaunchTests.swift */,
-			);
-			path = PureTimeUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -165,24 +135,6 @@
 			productReference = A73471092C0D62EF002B3CB6 /* PureTimeTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		A73471122C0D62EF002B3CB6 /* PureTimeUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = A73471232C0D62EF002B3CB6 /* Build configuration list for PBXNativeTarget "PureTimeUITests" */;
-			buildPhases = (
-				A734710F2C0D62EF002B3CB6 /* Sources */,
-				A73471102C0D62EF002B3CB6 /* Frameworks */,
-				A73471112C0D62EF002B3CB6 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				A73471152C0D62EF002B3CB6 /* PBXTargetDependency */,
-			);
-			name = PureTimeUITests;
-			productName = PureTimeUITests;
-			productReference = A73471132C0D62EF002B3CB6 /* PureTimeUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -197,10 +149,6 @@
 						CreatedOnToolsVersion = 15.3;
 					};
 					A73471082C0D62EF002B3CB6 = {
-						CreatedOnToolsVersion = 15.3;
-						TestTargetID = A73470F82C0D62ED002B3CB6;
-					};
-					A73471122C0D62EF002B3CB6 = {
 						CreatedOnToolsVersion = 15.3;
 						TestTargetID = A73470F82C0D62ED002B3CB6;
 					};
@@ -221,7 +169,6 @@
 			targets = (
 				A73470F82C0D62ED002B3CB6 /* PureTime */,
 				A73471082C0D62EF002B3CB6 /* PureTimeTests */,
-				A73471122C0D62EF002B3CB6 /* PureTimeUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -237,13 +184,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		A73471072C0D62EF002B3CB6 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A73471112C0D62EF002B3CB6 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -270,15 +210,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A734710F2C0D62EF002B3CB6 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				A734711A2C0D62EF002B3CB6 /* PureTimeUITestsLaunchTests.swift in Sources */,
-				A73471182C0D62EF002B3CB6 /* PureTimeUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -286,11 +217,6 @@
 			isa = PBXTargetDependency;
 			target = A73470F82C0D62ED002B3CB6 /* PureTime */;
 			targetProxy = A734710A2C0D62EF002B3CB6 /* PBXContainerItemProxy */;
-		};
-		A73471152C0D62EF002B3CB6 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = A73470F82C0D62ED002B3CB6 /* PureTime */;
-			targetProxy = A73471142C0D62EF002B3CB6 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -512,42 +438,6 @@
 			};
 			name = Release;
 		};
-		A73471242C0D62EF002B3CB6 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = JYANFLU7NT;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.onato.PureTimeUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = PureTime;
-			};
-			name = Debug;
-		};
-		A73471252C0D62EF002B3CB6 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = JYANFLU7NT;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.onato.PureTimeUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = PureTime;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -574,15 +464,6 @@
 			buildConfigurations = (
 				A73471212C0D62EF002B3CB6 /* Debug */,
 				A73471222C0D62EF002B3CB6 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		A73471232C0D62EF002B3CB6 /* Build configuration list for PBXNativeTarget "PureTimeUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				A73471242C0D62EF002B3CB6 /* Debug */,
-				A73471252C0D62EF002B3CB6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
