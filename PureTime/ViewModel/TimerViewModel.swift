@@ -3,8 +3,9 @@ import Foundation
 import MediaPlayer
 
 class TimerViewModel: NSObject, ObservableObject {
-    @Published var elapsedTime = 0
+    @Published var selectedNumber = 5
     @Published var isPlaying = false
+    @Published var elapsedTime = 0
     
     var formattedTime: String {
         let hours = elapsedTime / 3600

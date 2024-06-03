@@ -14,6 +14,7 @@
 		A734710E2C0D62EF002B3CB6 /* PureTimeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A734710D2C0D62EF002B3CB6 /* PureTimeTests.swift */; };
 		A73471282C0D673D002B3CB6 /* TimerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A73471272C0D673D002B3CB6 /* TimerViewModel.swift */; };
 		A734712B2C0D69E9002B3CB6 /* Nimble in Frameworks */ = {isa = PBXBuildFile; productRef = A734712A2C0D69E9002B3CB6 /* Nimble */; };
+		A734712E2C0D6C27002B3CB6 /* LabelStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A734712D2C0D6C27002B3CB6 /* LabelStyle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +36,7 @@
 		A73471092C0D62EF002B3CB6 /* PureTimeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PureTimeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A734710D2C0D62EF002B3CB6 /* PureTimeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PureTimeTests.swift; sourceTree = "<group>"; };
 		A73471272C0D673D002B3CB6 /* TimerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewModel.swift; sourceTree = "<group>"; };
+		A734712D2C0D6C27002B3CB6 /* LabelStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelStyle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 		A73470FB2C0D62ED002B3CB6 /* PureTime */ = {
 			isa = PBXGroup;
 			children = (
+				A734712C2C0D6C08002B3CB6 /* ViewModifiers */,
 				A73471262C0D6730002B3CB6 /* ViewModel */,
 				A73470FC2C0D62ED002B3CB6 /* PureTimeApp.swift */,
 				A73470FE2C0D62ED002B3CB6 /* ContentView.swift */,
@@ -108,6 +111,14 @@
 				A73471272C0D673D002B3CB6 /* TimerViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		A734712C2C0D6C08002B3CB6 /* ViewModifiers */ = {
+			isa = PBXGroup;
+			children = (
+				A734712D2C0D6C27002B3CB6 /* LabelStyle.swift */,
+			);
+			path = ViewModifiers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -216,6 +227,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A734712E2C0D6C27002B3CB6 /* LabelStyle.swift in Sources */,
 				A73470FF2C0D62ED002B3CB6 /* ContentView.swift in Sources */,
 				A73471282C0D673D002B3CB6 /* TimerViewModel.swift in Sources */,
 				A73470FD2C0D62ED002B3CB6 /* PureTimeApp.swift in Sources */,
