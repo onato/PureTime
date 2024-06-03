@@ -12,6 +12,7 @@
 		A73471012C0D62EE002B3CB6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A73471002C0D62EE002B3CB6 /* Assets.xcassets */; };
 		A73471042C0D62EE002B3CB6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A73471032C0D62EE002B3CB6 /* Preview Assets.xcassets */; };
 		A734710E2C0D62EF002B3CB6 /* PureTimeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A734710D2C0D62EF002B3CB6 /* PureTimeTests.swift */; };
+		A73471282C0D673D002B3CB6 /* TimerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A73471272C0D673D002B3CB6 /* TimerViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +33,7 @@
 		A73471032C0D62EE002B3CB6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A73471092C0D62EF002B3CB6 /* PureTimeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PureTimeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A734710D2C0D62EF002B3CB6 /* PureTimeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PureTimeTests.swift; sourceTree = "<group>"; };
+		A73471272C0D673D002B3CB6 /* TimerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 		A73470FB2C0D62ED002B3CB6 /* PureTime */ = {
 			isa = PBXGroup;
 			children = (
+				A73471262C0D6730002B3CB6 /* ViewModel */,
 				A73470FC2C0D62ED002B3CB6 /* PureTimeApp.swift */,
 				A73470FE2C0D62ED002B3CB6 /* ContentView.swift */,
 				A73471002C0D62EE002B3CB6 /* Assets.xcassets */,
@@ -95,6 +98,14 @@
 				A734710D2C0D62EF002B3CB6 /* PureTimeTests.swift */,
 			);
 			path = PureTimeTests;
+			sourceTree = "<group>";
+		};
+		A73471262C0D6730002B3CB6 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				A73471272C0D673D002B3CB6 /* TimerViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -198,6 +209,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A73470FF2C0D62ED002B3CB6 /* ContentView.swift in Sources */,
+				A73471282C0D673D002B3CB6 /* TimerViewModel.swift in Sources */,
 				A73470FD2C0D62ED002B3CB6 /* PureTimeApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
