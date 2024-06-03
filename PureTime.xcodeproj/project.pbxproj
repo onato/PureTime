@@ -13,6 +13,7 @@
 		A73471042C0D62EE002B3CB6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A73471032C0D62EE002B3CB6 /* Preview Assets.xcassets */; };
 		A734710E2C0D62EF002B3CB6 /* PureTimeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A734710D2C0D62EF002B3CB6 /* PureTimeTests.swift */; };
 		A73471282C0D673D002B3CB6 /* TimerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A73471272C0D673D002B3CB6 /* TimerViewModel.swift */; };
+		A734712B2C0D69E9002B3CB6 /* Nimble in Frameworks */ = {isa = PBXBuildFile; productRef = A734712A2C0D69E9002B3CB6 /* Nimble */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A734712B2C0D69E9002B3CB6 /* Nimble in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -142,6 +144,9 @@
 				A734710B2C0D62EF002B3CB6 /* PBXTargetDependency */,
 			);
 			name = PureTimeTests;
+			packageProductDependencies = (
+				A734712A2C0D69E9002B3CB6 /* Nimble */,
+			);
 			productName = PureTimeTests;
 			productReference = A73471092C0D62EF002B3CB6 /* PureTimeTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -174,6 +179,9 @@
 				Base,
 			);
 			mainGroup = A73470F02C0D62ED002B3CB6;
+			packageReferences = (
+				A73471292C0D69E9002B3CB6 /* XCRemoteSwiftPackageReference "Nimble" */,
+			);
 			productRefGroup = A73470FA2C0D62ED002B3CB6 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -481,6 +489,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A73471292C0D69E9002B3CB6 /* XCRemoteSwiftPackageReference "Nimble" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Quick/Nimble.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A734712A2C0D69E9002B3CB6 /* Nimble */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A73471292C0D69E9002B3CB6 /* XCRemoteSwiftPackageReference "Nimble" */;
+			productName = Nimble;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A73470F12C0D62ED002B3CB6 /* Project object */;
 }

@@ -1,4 +1,5 @@
 import XCTest
+import Nimble
 @testable import PureTime
 
 final class PureTimeTests: XCTestCase {
@@ -25,5 +26,13 @@ final class PureTimeTests: XCTestCase {
         let sut = TimerViewModel()
         sut.elapsedTime = 9250
         XCTAssertEqual(sut.formattedTime, "02:34:10")
+    }
+    
+    func test_whenToggling_shouldUpdateState() {
+        let sut = TimerViewModel()
+        
+        expect(sut.isPlaying) == false
+        sut.togglePlay()
+        expect(sut.isPlaying) == true
     }
 }

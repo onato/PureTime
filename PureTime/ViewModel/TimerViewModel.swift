@@ -4,6 +4,7 @@ import MediaPlayer
 
 class TimerViewModel: NSObject, ObservableObject {
     @Published var elapsedTime = 0
+    @Published var isPlaying = false
     
     var formattedTime: String {
         let hours = elapsedTime / 3600
@@ -14,5 +15,11 @@ class TimerViewModel: NSObject, ObservableObject {
         } else {
             return String(format: "%02d:%02d", minutes, seconds)
         }
+    }
+}
+
+extension TimerViewModel {
+    func togglePlay() {
+        isPlaying.toggle()
     }
 }
