@@ -2,13 +2,17 @@ import AVFoundation
 import Foundation
 import MediaPlayer
 
-protocol SoundManagerProtocol: AnyObject {
+protocol SoundManagerDelegate: AnyObject {
     func didTapPlay()
     func didTapPause()
 }
 
-class SoundManager: NSObject {
-    weak var delegate: SoundManagerProtocol?
+protocol SoundManagerProtocol: AnyObject {
+    func play()
+}
+
+class SoundManager: NSObject, SoundManagerProtocol {
+    weak var delegate: SoundManagerDelegate?
     
     lazy var player: AVAudioPlayer? = {
         let url = Bundle.main.url(forResource: "bell", withExtension: "mp3")!
@@ -53,7 +57,7 @@ class SoundManager: NSObject {
         }
     }
     
-    private func playSound() {
+    internal func play() {
         player!.play()
     }
 }

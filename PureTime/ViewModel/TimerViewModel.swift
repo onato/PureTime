@@ -7,6 +7,10 @@ class TimerViewModel: NSObject, ObservableObject {
     @Published var isPlaying = false
     @Published var elapsedTime = 0
     
+    var soundManager: SoundManagerProtocol = SoundManager()
+    
+    var timer: Timer?
+    
     var formattedTime: String {
         let hours = elapsedTime / 3600
         let minutes = (elapsedTime / 60) % 60
@@ -22,5 +26,25 @@ class TimerViewModel: NSObject, ObservableObject {
 extension TimerViewModel {
     func togglePlay() {
         isPlaying.toggle()
+    }
+    
+    func startTimer() {
+        elapsedTime = 0
+        stopTimer()
+        timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { [weak self] _ in
+            self?.updateTimer()
+        }
+    }
+
+    func stopTimer() {
+        timer?.invalidate()
+        timer = nil
+    }
+    
+    internal func updateTimer() {
+        elapsedTime += 1
+        if elapsedTime % (selectedNumber*60) == 0 {
+            soundManager.play()
+        }
     }
 }

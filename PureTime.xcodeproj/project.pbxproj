@@ -18,6 +18,8 @@
 		A73471322C0D6DF0002B3CB6 /* bell.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A734712F2C0D6DF0002B3CB6 /* bell.mp3 */; };
 		A73471332C0D6DF0002B3CB6 /* silence.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A73471302C0D6DF0002B3CB6 /* silence.mp3 */; };
 		A73471352C0D6E42002B3CB6 /* SoundManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A73471342C0D6E42002B3CB6 /* SoundManager.swift */; };
+		A73471372C0D7197002B3CB6 /* TimerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A73471362C0D7197002B3CB6 /* TimerTests.swift */; };
+		A734713A2C0D7277002B3CB6 /* SoundManagerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A73471392C0D7277002B3CB6 /* SoundManagerMock.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +45,8 @@
 		A734712F2C0D6DF0002B3CB6 /* bell.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bell.mp3; sourceTree = "<group>"; };
 		A73471302C0D6DF0002B3CB6 /* silence.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = silence.mp3; sourceTree = "<group>"; };
 		A73471342C0D6E42002B3CB6 /* SoundManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundManager.swift; sourceTree = "<group>"; };
+		A73471362C0D7197002B3CB6 /* TimerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerTests.swift; sourceTree = "<group>"; };
+		A73471392C0D7277002B3CB6 /* SoundManagerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundManagerMock.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,7 +111,9 @@
 		A734710C2C0D62EF002B3CB6 /* PureTimeTests */ = {
 			isa = PBXGroup;
 			children = (
+				A73471382C0D7265002B3CB6 /* Mocks */,
 				A734710D2C0D62EF002B3CB6 /* PureTimeTests.swift */,
+				A73471362C0D7197002B3CB6 /* TimerTests.swift */,
 			);
 			path = PureTimeTests;
 			sourceTree = "<group>";
@@ -136,6 +142,14 @@
 				A73471342C0D6E42002B3CB6 /* SoundManager.swift */,
 			);
 			path = Sound;
+			sourceTree = "<group>";
+		};
+		A73471382C0D7265002B3CB6 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				A73471392C0D7277002B3CB6 /* SoundManagerMock.swift */,
+			);
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,7 +272,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A734713A2C0D7277002B3CB6 /* SoundManagerMock.swift in Sources */,
 				A734710E2C0D62EF002B3CB6 /* PureTimeTests.swift in Sources */,
+				A73471372C0D7197002B3CB6 /* TimerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
