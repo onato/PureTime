@@ -46,5 +46,16 @@ extension TimerViewModel {
         if elapsedTime % (selectedNumber*60) == 0 {
             soundManager.play()
         }
+        updateNowPlayingInfo()
+    }
+    
+    private func updateNowPlayingInfo() {
+        var nowPlayingInfo = [String: Any]()
+        nowPlayingInfo[MPMediaItemPropertyTitle] = "Pure Time"
+        nowPlayingInfo[MPMediaItemPropertyArtist] = "Ringing every \(selectedNumber) minutes"
+        nowPlayingInfo[MPMediaItemPropertyPlaybackDuration] = selectedNumber * 60
+        nowPlayingInfo[MPNowPlayingInfoPropertyElapsedPlaybackTime] = elapsedTime % (selectedNumber*60)
+        
+        MPNowPlayingInfoCenter.default().nowPlayingInfo = nowPlayingInfo
     }
 }
