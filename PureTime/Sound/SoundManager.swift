@@ -14,16 +14,16 @@ protocol SoundManagerProtocol: AnyObject {
 class SoundManager: NSObject, SoundManagerProtocol {
     weak var delegate: SoundManagerDelegate?
     
-    lazy var player: AVAudioPlayer? = {
+    lazy var player: AVAudioPlayer! = {
         let url = Bundle.main.url(forResource: "bell", withExtension: "mp3")!
-        return try? AVAudioPlayer(contentsOf: url)
+        return try! AVAudioPlayer(contentsOf: url)
     }()
 
-    lazy var silentPlayer: AVAudioPlayer? = {
+    lazy var silentPlayer: AVAudioPlayer! = {
         let url = Bundle.main.url(forResource: "silence", withExtension: "mp3")!
-        var player = try? AVAudioPlayer(contentsOf: url)
-        player?.delegate = self
-        player?.numberOfLoops = -1 // Infinite loop
+        var player = try! AVAudioPlayer(contentsOf: url)
+        player.delegate = self
+        player.numberOfLoops = -1 // Infinite loop
         return player
     }()
 
@@ -58,14 +58,14 @@ class SoundManager: NSObject, SoundManagerProtocol {
     }
     
     internal func play() {
-        player!.play()
+        player.play()
     }
 }
 
 extension SoundManager: AVAudioPlayerDelegate {
     func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully _: Bool) {
         if player == silentPlayer {
-            silentPlayer?.play()
+            silentPlayer.play()
         }
     }
 }

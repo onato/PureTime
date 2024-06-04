@@ -25,6 +25,11 @@ class TimerViewModel: NSObject, ObservableObject {
 
 extension TimerViewModel {
     func togglePlay() {
+        if isPlaying {
+            stopTimer()
+        } else {
+            startTimer()
+        }
         isPlaying.toggle()
     }
     

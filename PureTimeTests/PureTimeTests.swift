@@ -34,5 +34,8 @@ final class PureTimeTests: XCTestCase {
         expect(sut.isPlaying) == false
         sut.togglePlay()
         expect(sut.isPlaying) == true
+        expect(sut.timer?.isValid) == true
+        sut.togglePlay()
+        expect(sut.timer).to(beNil())
     }
 }
