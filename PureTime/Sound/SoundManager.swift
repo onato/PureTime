@@ -28,10 +28,11 @@ class SoundManager: NSObject, SoundManagerProtocol {
         return player
     }()
 
-    override init() {
+    init(delegate: SoundManagerDelegate) {
         super.init()
         configureRemoteTransportControls()
         setupAudioSession()
+        self.delegate = delegate
     }
     
     func setupAudioSession() {

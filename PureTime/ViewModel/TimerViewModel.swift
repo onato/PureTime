@@ -7,7 +7,9 @@ class TimerViewModel: NSObject, ObservableObject {
     @Published var isPlaying = false
     @Published var elapsedTime = 0
     
-    var soundManager: SoundManagerProtocol = SoundManager()
+    lazy var soundManager: SoundManagerProtocol = {
+        SoundManager(delegate: self)
+    }()
     
     var timer: Timer?
     
@@ -63,5 +65,15 @@ extension TimerViewModel {
         nowPlayingInfo[MPNowPlayingInfoPropertyElapsedPlaybackTime] = elapsedTime % (selectedNumber*60)
         
         MPNowPlayingInfoCenter.default().nowPlayingInfo = nowPlayingInfo
+    }
+}
+
+extension TimerViewModel: SoundManagerDelegate {
+    func didTapPlay() {
+        startTimer()
+    }
+    
+    func didTapPause() {
+        stopTimer()
     }
 }
