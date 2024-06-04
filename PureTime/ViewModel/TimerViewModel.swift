@@ -39,6 +39,7 @@ extension TimerViewModel {
         timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { [weak self] _ in
             self?.updateTimer()
         }
+        soundManager.start()
     }
 
     func stopTimer() {

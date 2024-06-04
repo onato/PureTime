@@ -16,6 +16,17 @@ final class TimerTests: XCTestCase {
         expect(soundManager.playCalled) == true
     }
     
+    func test_whenStartingTheTimer_shouldStartTheSoundManager() throws {
+        let sut = TimerViewModel()
+        let soundManager = SoundManagerProtocolMock()
+        sut.soundManager = soundManager
+        
+        sut.startTimer()
+        
+        expect(soundManager.startCalled) == true
+    }
+
+    
     func test_whenRunning_shouldUpdateNowPlayingInfo() {
         let sut = TimerViewModel()
         let soundManager = SoundManagerProtocolMock()

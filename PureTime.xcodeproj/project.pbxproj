@@ -47,6 +47,7 @@
 		A73471342C0D6E42002B3CB6 /* SoundManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundManager.swift; sourceTree = "<group>"; };
 		A73471362C0D7197002B3CB6 /* TimerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerTests.swift; sourceTree = "<group>"; };
 		A73471392C0D7277002B3CB6 /* SoundManagerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundManagerMock.swift; sourceTree = "<group>"; };
+		A734713B2C0EC077002B3CB6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +90,7 @@
 		A73470FB2C0D62ED002B3CB6 /* PureTime */ = {
 			isa = PBXGroup;
 			children = (
+				A734713B2C0EC077002B3CB6 /* Info.plist */,
 				A73471312C0D6DF0002B3CB6 /* Sound */,
 				A734712C2C0D6C08002B3CB6 /* ViewModifiers */,
 				A73471262C0D6730002B3CB6 /* ViewModel */,
@@ -419,6 +421,7 @@
 				DEVELOPMENT_TEAM = JYANFLU7NT;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PureTime/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -448,6 +451,7 @@
 				DEVELOPMENT_TEAM = JYANFLU7NT;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PureTime/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

@@ -15,4 +15,18 @@ final class SoundManagerProtocolMock: SoundManagerProtocol {
         playCallsCount += 1
         playClosure?()
     }
+    
+    // MARK: - start
+    
+    var startCallsCount = 0
+    var startCalled: Bool {
+        startCallsCount > 0
+    }
+    var startClosure: (() -> Void)?
+
+    func start() {
+        startCallsCount += 1
+        startClosure?()
+    }
+
 }

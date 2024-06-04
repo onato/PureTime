@@ -9,6 +9,7 @@ protocol SoundManagerDelegate: AnyObject {
 
 protocol SoundManagerProtocol: AnyObject {
     func play()
+    func start()
 }
 
 class SoundManager: NSObject, SoundManagerProtocol {
@@ -59,6 +60,9 @@ class SoundManager: NSObject, SoundManagerProtocol {
     
     internal func play() {
         player.play()
+    }
+    internal func start() {
+        silentPlayer.play()
     }
 }
 
