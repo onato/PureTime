@@ -32,7 +32,6 @@ extension TimerViewModel {
         } else {
             startTimer()
         }
-        isPlaying.toggle()
     }
     
     func startTimer() {
@@ -42,11 +41,13 @@ extension TimerViewModel {
             self?.updateTimer()
         }
         soundManager.start()
+        isPlaying = true
     }
 
     func stopTimer() {
         timer?.invalidate()
         timer = nil
+        isPlaying = false
     }
     
     internal func updateTimer() {
@@ -58,6 +59,10 @@ extension TimerViewModel {
     }
     
     private func updateNowPlayingInfo() {
+        guard isPlaying else {
+            MPNowPlayingInfoCenter.default().nowPlayingInfo = nil
+            return
+        }
         var nowPlayingInfo = [String: Any]()
         nowPlayingInfo[MPMediaItemPropertyTitle] = "Pure Time"
         nowPlayingInfo[MPMediaItemPropertyArtist] = "Ringing every \(selectedNumber) minutes"
