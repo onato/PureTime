@@ -2,36 +2,46 @@ import SwiftUI
 
 struct ContentView: View {
     @StateObject private var viewModel = TimerViewModel()
+    @Namespace private var animation
 
     var body: some View {
-        if viewModel.isPlaying {
-            Text(viewModel.formattedTime).timeStyle()
-            Button(action: {
-                viewModel.togglePlay()
-            }) {
-                Text("Stop").buttonStyle()
-            }
-        } else {
+        VStack {
             Image("Background")
                 .resizable()
-                .opacity(0.4)
+                .renderingMode(.template)
+                .foregroundColor(.secondary)
                 .scaledToFit()
                 .frame(height: 180)
-            HStack {
-                Text("Ring every").labelStyle()
-                Picker("Numbers", selection: $viewModel.selectedNumber) {
-                    ForEach(1 ..< 60) { number in
-                        Text("\(number)").tag(number)
+            if viewModel.isPlaying {
+                Text(viewModel.formattedTime).timeStyle()
+                Button(action: {
+                    withAnimation(.spring()) {
+                        viewModel.togglePlay()
                     }
+                }) {
+                    Text(" Stop ").buttonStyle()
                 }
-                .pickerStyle(WheelPickerStyle())
-                .frame(width: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/)
-                Text("minutes").labelStyle()
-            }.padding(20)
-            Button(action: {
-                viewModel.togglePlay()
-            }) {
-                Text("Begin").buttonStyle()
+                .matchedGeometryEffect(id: "Button", in: animation)
+            } else {
+                HStack {
+                    Text("Ring every").labelStyle()
+                    Picker("Numbers", selection: $viewModel.selectedNumber) {
+                        ForEach(1 ..< 60) { number in
+                            Text("\(number)").tag(number)
+                        }
+                    }
+                    .pickerStyle(WheelPickerStyle())
+                    .frame(width: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/)
+                    Text("minutes").labelStyle()
+                }.padding(20)
+                Button(action: {
+                    withAnimation(.spring()) {
+                        viewModel.togglePlay()
+                    }
+                }) {
+                    Text("Begin").buttonStyle()
+                }
+                .matchedGeometryEffect(id: "Button", in: animation)
             }
         }
     }
